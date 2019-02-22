@@ -1,10 +1,19 @@
 /***** BODY ******/
 body {
-    width: 90%;
+    width: 85%;
     margin: auto;
     
 }
 /***** END OF BODY******/
+
+/***** APP NAME ******/
+.appName {
+    font-family: 'Black Ops One', cursive;
+    text-align: center;
+    padding: 0.001em;
+}
+/***** APP NAME END ******/
+
 
 /***** NAVAGATION BAR ******/
 .navBar ul {
@@ -29,11 +38,154 @@ body {
 
 .navBar li a:hover {
   background-color: lightyellow;
+  color: black;
+  font-weight: bold;
 }
 
 .navBar .active {
     background-color: yellow;
     color: black;
+    font-weight: 900;
 }
 
 /***** END OF NAVAGATION BAR ******/
+
+/***** SEARCH BAR ******/
+* {
+  box-sizing: border-box;
+}
+
+
+.searchBar {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    
+}
+
+form.searchBar input[type=text] {
+  //padding: 0.5em;
+  font-size: 0.9em;
+  padding: none;
+  border: none;
+  float: left;
+  width: 90%;
+  background: #f1f1f1;
+  height: 2.5em;
+}
+
+form.searchBar button {
+  background-color: lightgrey;
+  //border: solid; 
+  border-color: grey;
+  border-style: none;
+  cursor: pointer;
+  //padding: 0.27em;
+  width: 10%;
+  padding: none;
+  height: 2.75em;
+  border: none;
+} 
+
+form.searchBar img {
+    float: left;
+    width; 10%;
+    height: 1.9em;
+    background-color: lightgray;
+    align-content: center;
+    
+}
+
+form.searchBar button:hover {
+  border-color: yellow;
+  
+}
+
+form.searchBar::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/***** END OF SEARCH BAR ******/
+
+/***** START OF POST CONTAINER ******/
+.row:after {
+    content: "";
+    float: left;
+    clear: both;
+}
+/***** END OF POST CONTAINER ******/
+/***** POST ******/
+div {
+    display: block;
+}
+.post {
+    float: left;
+    width: 33.3%;
+    height: 20e*
+    background-color: #2F314C; /*i was trying out this color */
+    background-color: black;
+    border-style: solid;
+    border-color: white;
+    border-width: 0.5em;
+}
+
+.post div {
+    width: 100%;
+    margin-left: 0.5em;
+}
+
+.post img {
+    vertical-align: middle;
+    width: 5em;
+    height: auto;
+    max-height: 50%;
+    float: left;
+    padding: 0.5em;
+    
+    
+}
+.post {
+    display: -webkit-flex; /* Safari */
+  -webkit-align-items: center; /* Safari 7.0+ */
+    align-items:flex-start;
+}
+.post {
+    color: white;
+}
+
+img {
+    vertical-align: baseline;
+}
+
+.name {
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    font-weight: bold;
+}
+
+.postInfo {
+    
+    float: right;
+    color: white;
+    margin-right: 5%;
+    
+}
+
+.description p {
+    margin-right: 5%;
+    
+}
+
+.post table {
+    width: 100%;
+    align-content: center;
+}
+
+.post td {
+    text-align: center;
+    
+}
+
+
+
+/***** END OF POST ******/
