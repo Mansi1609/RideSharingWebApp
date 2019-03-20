@@ -4,6 +4,10 @@ body {
     margin: auto;
     
 }
+.column {
+    float:left;
+    width:50%;
+}
 /***** END OF BODY******/
 
 /***** APP NAME ******/
