@@ -189,3 +189,124 @@ img {
 
 
 /***** END OF POST ******/
+
+div .posting  {
+    display: block;
+}
+
+
+
+
+/****** START OF postingFomr *****/ 
+.postingForm {
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 1em;
+    border-radius: 0.175em;
+    
+}
+
+.postingForm label {
+    font-family: 'times new roman';
+    font-weight: 800;
+    //margin-left: 3%;
+    padding-top: 4em;
+    font-size: 1.125em;
+    //margin-left: 3%;
+    margin-right: auto;
+    width: 95%;
+    
+}
+
+.postingForm table {
+    //margin-left: 3%;
+    //width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.postingForm th {
+    font-family: 'times new roman';
+    font-size: 1.125em;
+}
+
+
+
+.postingForm input.tirpDescription {
+    width: 100%;
+    height: 5em;
+    padding: 0;
+    text-align: left;
+    
+}
+
+.postingForm label.tirpDescription  {
+ text-align: left;
+    
+    
+}
+
+
+.postingForm input {
+    
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    border-radius: 0.124em;
+    text-align: center;
+    box-shadow: none;
+    text-shadow: none;
+    border-style: solid;
+    border-color: white;
+    font-family: 'times new roman';
+    
+}
+
+.postingForm td input {
+    width: 100%;
+    border-color: white;
+    box-shadow: none;
+    border-style: solid;
+}
+
+.button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    font-family: 'impact';
+    padding: 0.5em 0.125em;
+    color: black;
+    background-color: yellow;
+    font-family: sans-serif; 
+    border-style: solid;
+    border-color: black;
+    
+    
+}
+
+
+
+
+/****** END OF postingFomr *****/ 
+
+
+@media only screen and (min-width: 48em) {
+
+    /*postinForm START*/
+    .postingForm {
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 1em;
+    border-radius: 0.175em;
+    width: 50%;
+        
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+  
+}//end of @media at 38em
