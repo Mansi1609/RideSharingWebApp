@@ -108,25 +108,45 @@ form.searchBar::after {
 /***** END OF SEARCH BAR ******/
 
 /***** START OF POST CONTAINER ******/
-.row:after {
+/*.row:after {
     content: "";
     float: left;
     clear: both;
-}
+}*/
 /***** END OF POST CONTAINER ******/
 /***** POST ******/
+.feedContainer {
+    background-color: floralwhite;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
 div {
     display: block;
 }
 .post {
-    float: left;
+    /*orginal 3 column stuff
+    /*float: left;
     width: 33.3%;
     height: 20e*
-    background-color: #2F314C; /*i was trying out this color */
+    background-color: #2F314C; /
     background-color: black;
     border-style: solid;
     border-color: white;
+    border-width: 0.5em;*/
+    display: block;
+    background-color: #2F314C; 
+    background-color: black;
+   // border-style: solid;
+   // border-color: none;
     border-width: 0.5em;
+    width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .post div {
@@ -144,11 +164,11 @@ div {
     
     
 }
-.post {
-    display: -webkit-flex; /* Safari */
-  -webkit-align-items: center; /* Safari 7.0+ */
+/*.post {
+    display: -webkit-flex; /* Safari 
+  -webkit-align-items: center; /* Safari 7.0+ 
     align-items:flex-start;
-}
+}*/
 .post {
     color: white;
 }
@@ -173,6 +193,7 @@ img {
 
 .description p {
     margin-right: 5%;
+    padding-bottom: 1.5em;
     
 }
 
@@ -310,3 +331,5 @@ div .posting  {
 }
   
 }//end of @media at 38em
+    
+    

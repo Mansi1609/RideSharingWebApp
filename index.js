@@ -70,3 +70,77 @@ function savePost(destination, location, dateGoing, departureTime, arrivalTime, 
         tripDescription: tripDescription
     });
 }
+console.log('testing');
+//getting values
+
+ const familyDrinks = document.querySelector("#feed");
+
+db.collection("trips").get().then(function (querySnapshot) {
+     querySnapshot.forEach(function (doc) {
+        // doc.data() is never undefined for query doc snapshots
+       // console.log(doc.id, " => ", doc.data());
+
+         var idName = doc.id;
+         var destination = doc.data().destination;
+         var location = doc.data().location;
+         var date = doc.data().dateGoing;
+         var arrivalTime = doc.data().arrivalTime;
+         var departureTime = doc.data().departureTime;
+         var returnTime = doc.data().returnTime;
+         var seats = doc.data().seats;
+         var email = "temp@Email";
+         var phoneNum = "(712) 111-2211";
+         var description = doc.data().tripDescription;
+         
+         /*familyDrinks.innerHTML += " \
+            <div class='fourColumn'>\
+                <img class='image' src='" + photo + "'>\
+                <h1 class='name'> " + name + " " +size + "</h1>\
+                <p class='price'>$"+ price + " </p>\
+                <button type='submit' onclick='addItem(\" " + idName + "\" )'>add</button>\
+            </div>";*/
+         
+    
+         
+          feed.innerHTML += " \
+            <div'>\
+                <div class='post'>\
+                    <div>\
+                        <img src='circleProfile.png' alt='User photo'>\
+                        <div class='name'>John Doe</div>\
+                        <div>Destination: <span class='postInfo'>" + destination + "</span></div>\
+                        <div>Location: <span class='postInfo'>" + location + "</span></div>\
+                        <div>Date: <span class='postInfo'>" + date + "</span></div>\
+                        <table>\
+                        <tr>\
+                            <th>Departure</th>\
+                            <th>Arrival</th>\
+                            <th>Return</th>\
+                            <th>Seats</th>\
+                        </tr>\
+                        <tr>\
+                            <td>" + departureTime + "</td>\
+                            <td>" + arrivalTime + "</td>\
+                            <td>" + returnTime + "</td>\
+                            <td>" + seats + "</td>\
+                        </tr>\
+                        </table>\
+                        <div>\
+                        <p>Email: "+ email +" <span class='postInfo'>"+ phoneNum + "</span></p>\
+                        </div>\
+                        <div class='description'><p>" + description + "</p></div>\
+                    </div>\
+                </div>\
+            </div>";
+         
+         
+         console.log(location);
+         
+         
+         
+         
+    
+     });
+     
+        
+ });
