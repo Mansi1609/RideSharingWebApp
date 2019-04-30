@@ -1,0 +1,448 @@
+/***** BODY ******/
+body {
+    width: 85%;
+    margin: auto;
+
+}
+
+/***** END OF BODY******/
+
+/***** APP NAME ******/
+.appName {
+    font-family: 'Black Ops One', cursive;
+    text-align: center;
+    padding: 0.001em;
+}
+
+
+/***** APP NAME END ******/
+
+
+/***** NAVAGATION BAR ******/
+.navBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.navBar li {
+    float: left;
+}
+
+.navBar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navBar li a:hover {
+    background-color: lightyellow;
+    color: black;
+    font-weight: bold;
+}
+
+.navBar .active {
+    background-color: yellow;
+    color: black;
+    font-weight: 900;
+}
+
+/***** END OF NAVAGATION BAR ******/
+
+/***** SEARCH BAR ******/
+* {
+    box-sizing: border-box;
+}
+
+
+.searchBar {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+form.searchBar input[type=text] {
+    //padding: 0.5em;
+    font-size: 0.9em;
+    padding: none;
+    border: none;
+    float: left;
+    width: 90%;
+    background: #f1f1f1;
+    height: 2.5em;
+}
+
+form.searchBar button {
+    background-color: lightgrey;
+    //border: solid; 
+    border-color: grey;
+    border-style: none;
+    cursor: pointer;
+    //padding: 0.27em;
+    width: 10%;
+    padding: none;
+    height: 2.75em;
+    border: none;
+}
+
+form.searchBar img {
+    float: left;
+    width: 100%;
+    height: 1.9em;
+    background-color: lightgray;
+    align-content: center;
+
+}
+
+form.searchBar button:hover {
+    border-color: yellow;
+
+}
+
+form.searchBar::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/***** END OF SEARCH BAR ******/
+
+/***** START OF POST CONTAINER ******/
+/*.row:after {
+    content: "";
+    float: left;
+    clear: both;
+}*/
+/***** END OF POST CONTAINER ******/
+/***** POST ******/
+.feedContainer {
+    //background-color: floralwhite;
+    width: 80%;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.5em;
+    padding-bottom: 3em;
+}
+
+div {
+    display: block;
+}
+
+.post {
+    /*orginal 3 column stuff
+    /*float: left;
+    width: 33.3%;
+    height: 20e*
+    background-color: #2F314C; /
+    background-color: black;
+    border-style: solid;
+    border-color: white;
+    border-width: 0.5em;*/
+    display: block;
+    background-color: #2F314C;
+    background-color: black;
+    // border-style: solid;
+    // border-color: none;
+    border-width: .5em;
+    width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.post div {
+    width: auto;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.post img {
+    vertical-align: middle;
+    width: 5em;
+    height: auto;
+    max-height: 50%;
+    float: left;
+    padding: 0.5em;
+
+
+}
+
+/*.post {
+    display: -webkit-flex; /* Safari 
+  -webkit-align-items: center; /* Safari 7.0+ 
+    align-items:flex-start;
+}*/
+.post {
+    color: white;
+}
+
+img {
+    vertical-align: baseline;
+}
+
+/* Changed this */
+.name p {
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    font-weight: bold;
+}
+
+/* end of changes */
+
+.postInfo {
+
+    float: right;
+    color: white;
+    margin-right: 2.5%;
+
+}
+
+.description p {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 1.5em;
+
+}
+
+.post table {
+    width: 100%;
+    align-content: center;
+}
+
+.post td {
+    text-align: center;
+
+}
+
+
+
+
+/***** END OF POST ******/
+
+div .posting {
+    display: block;
+}
+
+
+
+
+/****** START OF postingFomr *****/
+
+
+.collapse {
+    display: block;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    background-color: black;
+    color: white;
+    font-size: 1em;
+    border: none;
+    font-family: impact;
+    padding: 1em;
+
+}
+
+.postingForm {
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 0 1em;
+    border-radius: 0.175em;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+    /*collapse it*/
+    max-height: 0;
+    overflow: hidden;
+}
+
+.collapse:hover {
+    background-color: yellow;
+    color: black;
+}
+
+
+.postingForm label {
+    font-family: 'times new roman';
+    font-weight: 800;
+    //margin-left: 3%;
+    padding-top: 4em;
+    font-size: 1.125em;
+    //margin-left: 3%;
+    margin-right: auto;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.postingForm input.tirpDescription {
+    width: 100%;
+    padding: 0;
+    height: 5em;
+    text-align: left;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.postingForm label.tirpDescription {
+    text-align: left;
+}
+
+
+.postingForm input {
+
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    border-radius: 0.124em;
+    text-align: center;
+    box-shadow: none;
+    text-shadow: none;
+    border-style: solid;
+    border-color: white;
+    font-family: 'times new roman';
+    // float: right;
+    //    clear: both;
+}
+
+
+button.formSubBtn {
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: white;
+    border: none;
+    font-family: 'impact';
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+    
+}
+
+
+
+/****** END OF postingForm *****/
+
+/****** START OF updateForm*****/
+.updateForm {
+    display: block;
+    width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+    background-color: black;
+    color: white;
+    padding: 1em;
+    font-size: 1em;
+    
+}
+
+.updateForm input {
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+.updateBtns {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4em;
+}
+
+.edtBtns button {
+    display: block;
+}
+/****** END OF updateForm*****/
+
+/*
+@media only screen and (min-width: 48em) {
+
+    /*postinForm START*/
+/*
+    .postingForm {
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 1em;
+    border-radius: 0.175em;
+    width: 40%;
+        
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+    
+    body {
+        background-color: red;
+    }
+  
+}//end of @media at 38em */
+
+
+
+@media screen and (max-width: 35em) {
+
+    /*body*/
+    body {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    /*End of body*/
+    
+    /*search bar*/
+    .searchBar {
+        margin-left: auto;
+        margin-right: auto;
+        width: 98%;
+    }
+    /*End of search bar*.
+    
+    /*Create Post Button*/
+    .collapse {
+        width: 40%;
+    }
+    /*End of Create Post*/
+    
+    /*post*/
+    .feedContainer {
+        width: 98%;
+    }
+    .post {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    /*End of post*/
+    
+    /*Posting form*/
+    .postingForm {
+        width: 98%;
+    }
+    
+    .postingForm input {
+        width: 98%;
+    }
+    
+    
+    /*End of Posting Form*/
+    
+    /*Update form*/
+    .updateForm {
+    width: 98%;    
+    }
+    /*end of update form*/
+}
+
+
+
+

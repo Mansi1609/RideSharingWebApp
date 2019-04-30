@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WSC Ride Share</title>
+    <meta name="description" content="An interactive getting started guide for Brackets.">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="logIn.css">
+
+</head>
+
+<body>
+    <div class="appName">WSC <br>Ride Share</div>
+
+    <div id="test">hello</div>
+    <div class="logInForm">
+        <input type="text" id="user_field" name="firstname" placeholder="WSC Username">
+
+        <input type="text" id="password_field" name="lastname" placeholder="WSC Password">
+
+        <input type="submit" value="Submit" onclick="myFunction(this.id)">
+    </div>
+
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+<script>
+    var config = {
+        apiKey: "AIzaSyApmRAMvcs-SDBL08lykImZENr2rifpqlg",
+        authDomain: "ride-sharing-4c8e7.firebaseapp.com",
+        databaseURL: "https://ride-sharing-4c8e7.firebaseio.com",
+        projectId: "ride-sharing-4c8e7",
+        storageBucket: "ride-sharing-4c8e7.appspot.com",
+        messagingSenderId: "217057301737"
+    };
+    firebase.initializeApp(config);
+    
+    
+    var auth = firebase.auth().signInWithEmailAndPassword('gochit01@wsc.edu','password').catch(function(error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        //window.alert(errorMessage);
+    });
+    var db = firebase.firestore();
+    var docRef = db.collection("Users");
+    var docIDList = [];
+    var text = "<ul>";
+    db.collection("Users")
+        //.where("password", "==", "password")
+        .get()
+        .then(function(querySnapshot) {
+            querySnapshot.forEach(function(doc) {
+                // see in console to see the data
+                // Take out after it is developed
+                console.log(doc.id, " => ", doc.data());
+                //docIDList.push(doc.data().id);
+                //text += "<li>"+" <button type='button' id="+doc.data().id+" onclick='reply_click(this.id)'>Delete Me!</button>" + "</li>";
+
+                text += "<li>" + doc.data().id + "</li>"
+                //document.getElementById("test").innerHTML = text;
+                //add data to HTML
+                //content_div.innerHtML += doc.data().fName 
+            });
+        }).catch(function(error) {
+            console.log("Error getting documents: ", error);
+        });
+    
+    text += "</ul>";
+    document.getElementById("test").innerHTML = text;
+
+    function myFunction() {
+        var email = document.getElementById("user_field");
+        var password = document.getElementById("password_field");
+        var logIn = false;        
+        db.collection("Users")
+            //.where("capital", "==", true)
+            .get()
+            .then(function(querySnapshot) {
+                querySnapshot.forEach(function(doc) {
+                    //window.alert(new String(doc.data().wscEmail).valueOf()+ " "+ (new String(doc.data().wscEmail).valueOf()== new String(email.value).valueOf()));
+                    if (doc.data().wscEmail == email.value && doc.data().password == password.value) {
+                        /*This is to create a variable to hold the users name if for some reason it does not work, use the second method that is commented out below 
+                        var fName = doc.data().fName;
+                        var lName = doc.data().lName;
+                        var userName = fName.concat(lName);*/
+                        var userName = doc.data().fName + " " + doc.data().lName;
+                        
+                        window.alert("Login successfull!");
+                        console.log(doc.id);
+                       // window.location.replace("index.html");
+                        //send information to local storage if it is successful
+                        localStorage.setItem('userID', doc.id); 
+                        localStorage.setItem('userName', userName);
+                        localStorage.setItem('phoneNum', doc.data().phoneNumber);
+                        localStorage.setItem('wscEmail', doc.data().wscEmail);
+                        window.location.replace("index.html");
+                    } else if ((doc.data().wscEmail == email.value && doc.data().password != password.value)) {
+                        window.alert("Password is wrong");
+                    }
+                });
+            })
+            .catch(function(error) {
+                console.log("Error getting documents: ", error);
+            });
+        
+    }
+
+    function reply_click(clicked_id) {
+        alert(clicked_id);
+    }
+
+</script>
+
+</html>

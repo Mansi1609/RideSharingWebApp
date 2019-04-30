@@ -1,0 +1,72 @@
+<div>\
+                        <div class='post'>\
+                            <div>\
+                                <img src='circleProfile.png' alt='User photo'>\
+                                <div class='name'> <p>" + fullName + "</p></div>\
+                                <div>Destination: <span class='postInfo'>" + destination + "</span></div>\
+                                <div>Location: <span class='postInfo'>" + location + "</span></div>\
+                                <div>Date: <span class='postInfo'>" + date + "</span></div>\
+                                <table>\
+                                <tr>\
+                                    <th>Departure</th>\
+                                    <th>Arrival</th>\
+                                    <th>Return</th>\
+                                    <th>Seats</th>\
+                                </tr>\
+                                <tr>\
+                                    <td>" + departureTime + "</td>\
+                                    <td>" + arrivalTime + "</td>\
+                                    <td>" + returnTime + "</td>\
+                                    <td>" + seats + "</td><!-- add clicker to update seats. --> \
+                                </tr>\
+                                </table>\
+                                <div>\
+                                <p>Email: " + wscEmail + " <span class='postInfo'>" + phoneNum + "</span></p>\
+                                </div>\
+                                <div class='description'><p>" + description + "</p></div>\
+                                <div class='manageButtom'> \
+                                <button onclick='deletePost(this.id)' id=" + idName + " > Delete Me</button> \
+                                <button onclick='updatePost(this.id)' id=" + idName + "> Update Me</button> </div>\
+                            </div> \
+                        </div> \
+                    </div>"
+                    
+                    
+                    
+//This code does not work
+  <div> \
+                        <form id='updatingForm'> \
+                            <div>\
+                                <img src='circleProfile.png' alt='User photo'> \
+                                <div class='name'> <p>" + fullName + "</p></div>\
+                                <div id='updatingForm'> \
+
+                                        <div>Destination: <input type='text' id='destination' name='destination' value="+ destination +"></div>\
+                                        <div>Location: <input type='text' id='location' name='location' value="+ location +"></div>\
+                                        <div>Date: <input type='text' id='dateGoing' name='dateGoing' value="+ date +"></div>\
+                                        <br> \
+                                        <table>\
+                                        <tr>\
+                                            <th>Departure</th>\
+                                            <th>Arrival</th>\
+                                            <th>Return</th>\
+                                            <th>Seats</th>\
+                                        </tr>\
+                                        <tr>\
+                                            <td><input type='text' id='departureTime' name='departureTime' value=" + departureTime + "></td>\
+                                            <td><input type='text' id='arrivalTime' name='arrivalTime' value=" + arrivalTime + "></td>\
+                                            <td><input type='text' id='returnTime' name='returnTime' value=" + returnTime + "></td>\
+                                            <td><input type='text' id='seats' name='seats' value=" + seats + "> \
+                                        </tr>\
+                                        </table>\
+                                        <div>\
+                                        <p>Email: " + wscEmail + " <span class='postInfo'>" + phoneNum + "</span></p>\
+                                        </div>\
+                                        <div class='description'><p>" + description + "</p></div>\
+                                        <div class='manageButtom'> \
+                                        <button onclick='deletePost(this.id)' id=" + idName + " > Delete Me</button> \
+                                        <button onclick='updatePost(this.id)' id=" + idName + "> Update Me</button> </div>\
+                            </div> \
+                        </div> \
+                        </form> \
+                    </div>";

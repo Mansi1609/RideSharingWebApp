@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WSC Ride Share</title>
+    <meta name="description" content="An interactive getting started guide for Brackets.">
+    <link rel="stylesheet" href="styleSheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-firestore.js"></script>
+</head>
+
+<body>
+    <div class="appName">
+        <h1><a style="text-decoration: none;" href="devPage.html">WSC Ride Share</a></h1>
+    </div>
+
+    <div class="navBar">
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="managePosts.html">Manage Posts</a></li>
+        </ul>
+    </div>
+
+    <div class="searchBar">
+        <form class="searchBar srchBarContent">
+            <input type="text" placeholder="Where do you need to go?" name="search">
+            <button type="submit"><img src="magnifyingGlass.gif"></button>
+        </form>
+    </div>
+
+    <!--<div class="postedAlert">You are now registered!</div>-->
+
+    <div id="postingForm">
+
+        <button class="collapse">Create Post</button>
+        <form class="postingForm">
+
+            <label for="destination">Destination</label><br>
+            <input type="text" id="destination" name="destination" placeholder="City"><br>
+
+            <label for="location">Location</label><br>
+            <input type="text" id="location" name="location" placeholder="Signing Hills"><br>
+
+            <label for="date">Date going</label><br>
+            <input type="text" id="dateGoing" name="dateGoing" placeholder="2/21/2019">
+            <br>
+
+
+
+            <label for="departureTime">Departure time</label><br>
+            <input type="text" id="departureTime" name="departureTime" placeholder="5:00 PM"><br>
+
+            <label for="arrivalTime">Arrival time</label><br>
+            <input type="text" id="arrivalTime" name="arrivalTime" placeholder="6:00 PM"><br>
+
+            <label for="returnTime">Return time</label><br>
+            <input type="text" id="returnTime" name="returnTime" placeholder="7:00 PM"><br>
+
+            <label for="seats">Seats available</label><br>
+            <input type="text" id="seats" name="seats" placeholder="3"><br>
+
+            <label class="tirpDescription" for="tripDescription">Trip Description</label><br>
+            <input type="text" id="tripDescription" name="tripDescription" class="tirpDescription" placeholder="Will be making a quick trip to Walmart and back..."><br>
+
+
+
+            <button class="formSubBtn">Submit</button>
+            <!--<input type="submit" class="button" value="Submit">
+
+            <!-- <script>
+                var input = document.getElementById("myInput");
+                input.addEventListener("keyup", function(event) {
+                    if (event.keyCode === 13) {
+                        event.preventDefault();
+                        document.getElementById("myBtn").click();
+                    }
+                });
+
+            </script>-->
+        </form>
+
+        <script>
+            var coll = document.getElementsByClassName("collapse");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "em";
+                    }
+                });
+            }
+        </script>
+    </div>
+
+
+
+    <div class="feedContainer" id="feed">
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

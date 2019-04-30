@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WSC Ride Share</title>
+    <meta name="description" content="An interactive getting started guide for Brackets.">
+    <link rel="stylesheet" href="styleSheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-firestore.js"></script>
+</head>
+
+<body>
+    <div class="appName">
+    <h1>WSC Ride Share</h1>
+    </div>
+
+    <div class="navBar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="managePosts.html">Manage Posts</a></li>
+        </ul>
+    </div>
+    <!-- checking local storage -->
+    <script> console.log(localStorage.getItem('userID')); </script>
+
+    <div class="updateContainer" id="updateContainer">
+    </div>
+    
+    <div class="feedContainer" id="nfeed">
+    </div>
+    
+    
+
+    
+    
+    <script src="managePosts.js"></script>
+</body>
+
+</html>
