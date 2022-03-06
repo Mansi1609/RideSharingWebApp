@@ -1,6 +1,6 @@
 // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyApmRAMvcs-SDBL08lykImZENr2rifpqlg",
+    apiKey: "AIzaSyD8gnbNJH3uPe9vh4oWatcRHMDTuM6kfK8",
     authDomain: "ride-sharing-4c8e7.firebaseapp.com",
     databaseURL: "https://ride-sharing-4c8e7.firebaseio.com",
     projectId: "ride-sharing-4c8e7",
